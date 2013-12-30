@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_SpecFlow_NUnit", "Selenium_SpecFlow_NUnit\Selenium_SpecFlow_NUnit.csproj", "{AA773F22-E5DB-4297-8D21-87AFFA1B962E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA773F22-E5DB-4297-8D21-87AFFA1B962E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA773F22-E5DB-4297-8D21-87AFFA1B962E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA773F22-E5DB-4297-8D21-87AFFA1B962E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA773F22-E5DB-4297-8D21-87AFFA1B962E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
