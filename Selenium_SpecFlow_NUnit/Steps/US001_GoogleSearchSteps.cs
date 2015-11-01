@@ -5,6 +5,8 @@ using TechTalk.SpecFlow;
 
 namespace Selenium_SpecFlow_NUnit.Steps
 {
+    using OpenQA.Selenium;
+
     [Binding]
     public class US001_GoogleSearchSteps : SeleniumStepsBase
     {
@@ -13,13 +15,16 @@ namespace Selenium_SpecFlow_NUnit.Steps
         {
             selenium.NavigateTo(string.Empty);
         }
-        
-        [Given(@"I have entered '(.*)' into the text box of which id is '(.*)'")]
-        public void GivenIHaveEnteredIntoTheTextBoxOfWhichIdIs(string p0, string p1)
+
+        [Given(@"I have entered '(.*)' into the text box of which name is '(.*)'")]
+        public void GivenIHaveEnteredIntoTheTextBoxOfWhichNameIs(string p0, string p1)
         {
-            selenium.SetTextBoxValue(p1,p0);
+            var element = selenium.FindElement(By.Name("q"));
+            element.SendKeys(p0);
+            element.Submit();
+            // selenium.SetTextBoxValue(p1,p0);
         }
-        
+
         [When(@"I press button of which id is '(.*)'")]
         public void WhenIPressButtonOfWhichIdIs(string p0)
         {

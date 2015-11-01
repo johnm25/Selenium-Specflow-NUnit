@@ -10,6 +10,8 @@ using OpenQA.Selenium.Firefox;
 
 namespace Selenium_SpecFlow.Support
 {
+    using OpenQA.Selenium.Chrome;
+
     public class SeleniumController
     {
         public static SeleniumController Instance = new SeleniumController();
@@ -30,8 +32,12 @@ namespace Selenium_SpecFlow.Support
 
             var appUrl = ConfigurationManager.AppSettings["AppUrl"];
 
-            Selenium = new FirefoxDriver();
-            // Selenium = new InternetExplorerDriver();
+            ChromeDriverService Binary = ChromeDriverService.CreateDefaultService(@"..\..\");
+          //  IWebDriver driver = new ChromeDriver(Binary, new ChromeOptions());
+
+            //Selenium = new FirefoxDriver();
+            Selenium = new ChromeDriver(Binary, new ChromeOptions());
+            //Selenium = new InternetExplorerDriver();
             Selenium.Manage().Timeouts().ImplicitlyWait(DefaultTimeout);
 
             //            Selenium = new DefaultSelenium("localhost", 4444, "*chrome", appUrl);
